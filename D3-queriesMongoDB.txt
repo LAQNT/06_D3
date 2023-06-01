@@ -1,0 +1,21 @@
+D3:
+QUERY MONGO DB
+
+cerca utenti attivi:
+{isActive: true}
+
+cerca utenti con età maggiore di 26
+{age: {$gt: 26}}
+
+
+utenti maggiori de 26 minore/uguale 30:
+{$and: [{age: {$gt: 26}}, {age:{$lte:30}}]}
+
+trova gli utenti che hanno eyecolor brown / blue
+{eyeColor: {$in:["brown","blue"]}}
+
+utenti che non hanno eyeColor green
+{eyeColor: {$ne: "green"}}
+
+utenti che non hanno eyeColor green/blue
+{eyeColor: {$nin: ["green", "blue"]}}
