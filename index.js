@@ -63,11 +63,11 @@ app.get("/age/:age1/:age2", async (req, res) => {
 
 async function start() {
   try {
-    // ---------- 1st connect with db -----------------
+    // ---------- connect with db -----------------
     await mongoose.connect(
       "mongodb+srv://lauraquinteroa:PWa2WEXBqPqUD7bw@cluster0.nmxlgk4.mongodb.net/d3-epicode"
     );
-    // ---------- 2nd I access to server -----------------
+    // ---------- access to server -----------------
     app.listen(port, () => console.log("Server in port 3000!"));
   } catch (err) {
     console.error(err);
